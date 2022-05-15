@@ -1,0 +1,456 @@
+/* Box Model Hack */
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./assets/coverpic.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* COLORS background: pinkish #EA738DFF; bluish #89ABE3FF;*/
+
+/* Navigation Bar */
+header {
+  background-color: #EA738DFF;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-branding {
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: #89ABE3FF;
+}
+
+/* Mobile Menu + Other Buttons */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+.navbar .visitBtn,
+.mainSection .searchBtn {
+  background: #89ABE3FF;
+  border-color: #89ABE3FF;
+  color: black;
+  padding: 14px 23px;
+  font-size: 1.5rem;
+}
+.mainSection .searchBtn {
+  margin-left: -10px;
+}
+
+/* Sections */
+.mainSection {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.foursections {
+  width: 100%;
+  height: 450px;
+  padding-top: 80px;
+  background-color: white;
+  border-radius: 30% 30% 30% 25%;
+  display: flex;
+  flex-direction: row;
+}
+.feature1,
+.feature2,
+.feature3,
+.feature4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 5px;
+}
+.lastsection {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 0 0 80px;
+  padding: 10px 60px 10px 0;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #89ABE3FF;
+  color: black;
+  padding: 10px 30px 10px 20px;
+  font-size: 1.25rem;
+}
+.leftFooter, 
+.address,
+.rightFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Headings */
+.mainSection h1 {
+  margin: 30px 80px 0 80px;
+  padding-right: 280px;
+  line-height: 60px;
+  font-size: 4rem;
+}
+.mainSection h4 {
+  margin: 50px 200px 0 80px;
+  padding: 0;
+  color: #EA738DFF;
+  font-size: 1.8rem;
+}
+.foursections h3 {
+  color: #EA738DFF;
+  font-size: 2rem;
+}
+.lastsection h2 {
+  font-size: 3rem;
+}
+
+/* Form */
+.mainSectionForm {
+  margin: 30px 0 20px 80px;
+  display: flex;
+  font-size: 1.5rem;
+  flex-direction: column;
+}
+:placeholder-shown {
+  width: 580px;
+  height: 47px;
+}
+
+/* Paragraphs */
+.foursections p {
+  line-height: 30px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.lastsection p {
+  font-size: 2rem;
+  line-height: 40px;
+}
+
+/* Images */
+.foursections img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Links */
+.foursections a {
+  background-color:  #EA738DFF;
+  border-radius: 2rem;
+  padding: 10px 10px;
+  font-size: 1.5rem;
+}
+.footer a {
+  color: black;
+}
+.footer a:hover {
+  color: #EA738DFF;
+}
+.footer .socialLinks {
+  display: flex;
+}
+.footer .socialLinks li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+/* Icons */
+.foursections .fa-arrow-right-long {
+  padding-left: 10px;
+}
+.footer .fa-brands {
+  color: #EA738DFF;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/************
+MEDIA QUERIES 
+************/
+
+/* Mobile Devices & Low Resolution Tablets */
+@media all and (max-width: 767px) {
+  /* Navigation Menu */
+  .hamburger {
+      display: block;
+  }
+  .hamburger.active  .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger.active  .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active  .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 60px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #EA738DFF;
+      width: 100%;
+      align-items: flex-start;
+      padding-bottom: 15px;
+      transition: 0.3s;
+  }
+  .nav-item {
+      margin: 16px 0;
+  }
+  .nav-menu.active {
+      left: 0;
+  }
+  /* Sections */
+  .mainSection {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  .foursections {
+    margin-top: 40px;
+    height: 1600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 30px 45px;
+  }
+  .feature1,
+  .feature2,
+  .feature3,
+  .feature4 {
+    padding: 20px 40px;
+    margin: 10px 20px;
+    border-radius: 40%;
+  }
+  .feature1, 
+  .feature3 {
+    background: #89ABE3FF;
+    border: 2px solid #89ABE3FF;
+  }
+  .feature2,
+  .feature4 {
+    background: #EA738DFF;
+    border: 2px solid #EA738DFF;
+  }
+  .lastsection {
+    text-align: left;
+    margin: 0;
+    padding: 20px 20px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px 10px 20px;
+    font-size: 1.15rem;
+  }
+  .rightFooter {
+    align-self: center;
+  }
+
+  /* Headings */
+  .mainSection h1 {
+    margin: 20px 0 0 0;
+    line-height: 50px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  .mainSection h4 {
+    margin: 50px 0 15px 0;
+    color: white;
+    text-align: center;
+  }
+  .foursections h3 {
+    color: white;
+  }
+  
+
+  /* Form */
+  .mainSectionForm {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  :placeholder-shown {
+    width: 50%;
+  }
+
+  /* Paragraphs */
+  .foursections p {
+    padding: 0 5px;
+    margin-top: 0;
+    font-size: 1.75rem;
+  }
+  .lastsection p {
+    font-size: 1.75rem;
+    line-height: 40px;
+  }
+  
+  /* Links */
+  .foursections a {
+    background-color: white;
+  }
+  .socialLinks li {
+    align-self: center;
+  }
+}
+
+/* Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Navigation Menu */
+    .hamburger {
+      display: block;
+  }
+  .hamburger.active  .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger.active  .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active  .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 60px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #EA738DFF;
+      width: 100%;
+      align-items: flex-start;
+      padding-bottom: 15px;
+      transition: 0.3s;
+  }
+  .nav-item {
+      margin: 16px 0;
+  }
+  .nav-menu.active {
+      left: 0;
+  }
+
+  /* Sections */
+  .mainSection {
+    height: 450px;
+  }
+  .foursections {
+    height: 800px;
+    flex-wrap: wrap;
+  }
+  .feature1,
+  .feature2,
+  .feature3,
+  .feature4 {
+    flex: 50%; 
+    padding: 20px 10px;
+  }
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  /* Headings */
+  .mainSection h1 {
+    padding-right: 90px;
+  }
+  /* Forms */
+  :placeholder-shown {
+    width: 450px;
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Sections */
+  .mainSection {
+    height: 450px;
+  }
+  .foursections {
+    height: 500px;
+  }
+  .feature1,
+  .feature2,
+  .feature3,
+  .feature4 { 
+    padding: 20px 0;
+  }
+
+  /* Headings */
+  .mainSection h1 {
+    padding-right: 90px;
+  }
+}
