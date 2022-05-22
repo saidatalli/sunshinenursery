@@ -23,8 +23,13 @@ When I improve this project, I will use bootstrap to make responsive, mobile fir
 
 I learnt that it's easier to design the header with flexbox and then use Javascript for the hamburger toggle function.
 
-## More Projects
+## My other projects:
+Take a look at other projects that I have in my porfolio:
 
-![gif of the taste of africa website](https://media.giphy.com/media/ewQmE3HOvYHnsIhYc6/giphy.gif)
+**Halal Meals:** https://github.com/saidatalli/halalmeals
+
+**Ewatomi Beauty Salon:** https://github.com/saidatalli/ewatomibeautysalon
+
+**Taste of Africa:** https://github.com/saidatalli/tasteofafrica
 
 
